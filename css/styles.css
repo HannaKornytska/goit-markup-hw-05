@@ -126,7 +126,7 @@ img {
     color: var(--color-hover);
 }
 
-.nav-link .current {
+.nav-link.current {
     position: relative;
     color: var(--color-hover);
 }
@@ -607,7 +607,7 @@ width: calc((100% - 48px) / 3);
 /* -----------------------------------------MODaL*/
 .backdrop.is-hidden {
     opacity: 0;
-    pointer-events: none;
+    pointer-events: none;   
     visibility: hidden;
 }
 .backdrop {
@@ -625,7 +625,7 @@ width: calc((100% - 48px) / 3);
 .modal {
     position:absolute;
     width: 408px;
-    min-height: 576px;
+    height: 576px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -633,6 +633,7 @@ width: calc((100% - 48px) / 3);
     background: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
 }
 
 .modal-btn {
@@ -644,12 +645,12 @@ width: calc((100% - 48px) / 3);
     width: 24px;
     height: 24px;
     top: 24px;
-    left: 360px;
+    right: 24px;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;  
-    fill: 000000;
+    fill: #000000;
     transition: background-color var(--hover-transition),
     fill var(--hover-transition);
 }
