@@ -125,11 +125,11 @@ img {
 .site-nav .nav-link:focus {
     color: var(--color-hover);
 }
-.current {
-    position: relative;
-    color: var(--color-hover); 
-}
 
+.nav-link.current {
+    position: relative;
+    color: var(--color-hover);
+}
 .current::after {
     position: absolute;
     display: block;
