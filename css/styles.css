@@ -17,9 +17,7 @@ body {
     line-height: 1.5;  
 }
 .container {
-    
     max-width: 1158px;
-
     padding: 0 15px;
     margin: 0 auto; 
 }
@@ -111,7 +109,7 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: var(--hover-transition);
+    transition: color var(--hover-transition);
 }
 
 .site-nav .nav-link {
@@ -129,6 +127,7 @@ img {
 }
 .current {
     position: relative;
+    color: var(--color-hover); 
 }
 
 .current::after {
@@ -141,7 +140,7 @@ img {
     bottom: -1px;
     border-radius: 2px;
     background-color: var(--color-hover);
-    transition: var(--hover-transition);
+    transition: color var(--hover-transition);
 }
 
 
@@ -168,7 +167,7 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: var(--hover-transition);
+    transition: color  var(--hover-transition);
     
 }
 
@@ -182,7 +181,7 @@ img {
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: var(--hover-transition);
+    transition: color var(--hover-transition);
 }
 .site-auth .phone:hover,
 .site-auth .phone:focus {
@@ -241,7 +240,8 @@ img {
     padding: 16px 32px;
     min-width: 169px;
     min-height: 56px; 
-    transition: var(--hover-transition); 
+    transition: background-color var(--hover-transition),
+    color var(--hover-transition); 
             
 }
 
@@ -367,7 +367,7 @@ width: calc((100% - 48px) / 3);
     height: 100%;
     background: #4D5AE5;
     border-radius: 50%;
-    transition: var(--hover-transition);
+    transition: background-color var(--hover-transition);
     
   
     
@@ -421,32 +421,27 @@ width: calc((100% - 48px) / 3);
     top: 0;
     width: 100%;
     height: 100%;
+    padding: 40px 32px 164px 32px;
     background-color: var(--color-accent);
     transform: translateY(100%);
     transition: transform var(--hover-transition);
          
 }
 
-.item:hover .overlay {
+.link-card:hover .overlay, .link-card:focus .overlay {
     transform: translateY(0);
 }
  .overlay-text {
-    position: absolute;
-    display: block;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--color-second-white);
-    width: 296px;
-    height: 96px;
-    left: 32px;
-    top: 40px;
 }
 
 .link-card {
     display: block;
-    transition: var(--hover-transition);
+    transition: box-shadow var(--hover-transition);
 }
 
 .link-card:hover,
@@ -476,7 +471,9 @@ width: calc((100% - 48px) / 3);
     border-radius: 4px;
     border: 1px solid #E7E9FC;
     padding:12px 24px;
-    transition: var(--hover-transition);
+    transition: background-color var(--hover-transition),
+    color var(--hover-transition), border-color var(--hover-transition),
+    box-shadow var(--hover-transition) ;
 }
 
 .button:hover,
@@ -528,7 +525,8 @@ width: calc((100% - 48px) / 3);
     border: 1px solid var(--color-border);
     border-radius: 4px;
     fill: var(--color-border); 
-    transition: var(--hover-transition);
+    transition: fill var(--hover-transition),
+    border-color var(--hover-transition);
      
 }
 .customers-link:hover,
@@ -597,7 +595,7 @@ width: calc((100% - 48px) / 3);
    fill: var(--color-second-white);
    background: rgba(255, 255, 255, 0.1);
    border-radius: 50%;
-   transition: var(--hover-transition);
+   transition: background-color var(--hover-transition);
    
    
 
@@ -620,13 +618,14 @@ width: calc((100% - 48px) / 3);
     width: 100%;
     height:100%;
     background-color:rgba(46, 47, 66, 0.4);
-    transition: opacity visibility var(--hover-transition);  
+    transition: visibility var(--hover-transition),
+     opacity var(--hover-transition);  
     
 }
 .modal {
     position:absolute;
     width: 408px;
-    height: 576px;
+    min-height: 576px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -637,7 +636,7 @@ width: calc((100% - 48px) / 3);
 }
 
 .modal-btn {
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -650,11 +649,14 @@ width: calc((100% - 48px) / 3);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;  
-    transition: var(--hover-transition);
+    fill: 000000;
+    transition: background-color var(--hover-transition),
+    fill var(--hover-transition);
 }
 .modal-btn:hover,
 .modal-btn:focus {
-    background-color: var(--color-hover);
+    background: var(--color-hover);
+    fill: var(--background-white-color);
 }
 
     
