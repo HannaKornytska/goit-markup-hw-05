@@ -126,7 +126,7 @@ img {
     color: var(--color-hover);
 }
 
-.nav-link.current {
+.nav-link .current {
     position: relative;
     color: var(--color-hover);
 }
